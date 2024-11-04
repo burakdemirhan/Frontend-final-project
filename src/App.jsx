@@ -12,9 +12,9 @@ function App() {
   const { darkMode } = useDark();
   return (
     <div
-      className={
-        darkMode ? "dark bg-gray-800 text-white" : "bg-white text-black"
-      }
+      className={`${
+        darkMode ? "dark bg-[#252128] text-[#AEBCCF] " : "bg-white text-black"
+      }container mx-auto px-24 py-8`}
     >
       <Header />
       <Main />

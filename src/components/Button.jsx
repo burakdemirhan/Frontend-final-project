@@ -1,3 +1,4 @@
+import { FormGroup, Input, Label } from "reactstrap";
 import useDark from "../hooks/useDark";
 
 export default function Button() {
@@ -5,5 +6,15 @@ export default function Button() {
   const handleClick = () => {
     toggleDarkMode();
   };
-  return <button onClick={handleClick}>Dark Mode</button>;
+  return (
+    <>
+      <FormGroup switch>
+        <Input type="switch" checked={darkMode} onClick={handleClick} />
+        <Label check className="">
+          {" "}
+          {darkMode ? "Light Mode" : "Dark Mode"}{" "}
+        </Label>
+      </FormGroup>
+    </>
+  );
 }
