@@ -3,20 +3,26 @@ import Header from "./Pages/Header";
 import Skills from "./Pages/SkillsPage";
 import Projects from "./Pages/ProjectsPage";
 import Footer from "./Pages/Footer";
-import "./index.css";
-import "./App.css";
 import Profile from "./Pages/ProfilePage";
+import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import useDark from "./hooks/useDark";
+
 function App() {
+  const { darkMode } = useDark();
   return (
-    <>
+    <div
+      className={
+        darkMode ? "dark bg-gray-800 text-white" : "bg-white text-black"
+      }
+    >
       <Header />
       <Main />
       <Skills />
       <Profile />
       <Projects />
       <Footer />
-    </>
+    </div>
   );
 }
 

@@ -1,7 +1,9 @@
+import useDark from "../hooks/useDark";
+
 export default function Button() {
-  return (
-    <div>
-      <button>Dark Mode</button>
-    </div>
-  );
+  const { darkMode, toggleDarkMode } = useDark();
+  const handleClick = () => {
+    toggleDarkMode();
+  };
+  return <button onClick={handleClick}>Dark Mode</button>;
 }
