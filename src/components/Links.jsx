@@ -2,7 +2,7 @@ export default function Links() {
   return (
     <div className="flex">
       <div className="flex items-center justify-center w-10 h-10 bg-[#EEEBFF] text-[#7B61FF] font-bold rounded-full">
-        <span className="transform rotate-12"> B</span>
+        <span className="transform rotate-12">B</span>
       </div>
 
       <nav className="flex gap-4  ml-auto items-center">

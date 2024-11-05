@@ -10,7 +10,7 @@ export default function Button() {
     <>
       <FormGroup switch>
         <Input type="switch" checked={darkMode} onClick={handleClick} />
-        <Label check className="">
+        <Label className="text-[#777777]" check>
           {" "}
           {darkMode ? "Light Mode" : "Dark Mode"}{" "}
         </Label>
