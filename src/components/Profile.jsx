@@ -1,28 +1,35 @@
+import useLanguage from "../hooks/useLanguage";
+import { ceviri } from "../language";
 
 export default function Profile() {
+  const { leanguage } = useLanguage();
+
   return (
-    <div className="flex gap-36">
-      <div>
-        <h3 className="text-[#4338CA]">Profile</h3>
-        <ul className="p-0 flex flex-col gap-2">
-          <li>Ad Soyad: Burak Demirhan</li>
-          <li>İkamet Şehri: Ankara</li>
-          <li>Egitim Durumu: Üniveriste Mezunu</li>
-          <li>Tercih Ettigi Rol: Harika Developer</li>
+    <div className="flex justify-between">
+      <div className="flex flex-col gap-8">
+        <h3 className="text-[#4338CA]">{ceviri[leanguage].profile}</h3>
+        <ul className="p-0 flex flex-col gap-8">
+          {Object.values(ceviri[leanguage].profileDetails).map(
+            (detail, index) => (
+              <li key={index} className="flex gap-4 text-[#6B7280]">
+                <span className="font-semibold w-36 text-[#000000]">
+                  {detail.label}:
+                </span>
+                <span className="flex-1">{detail.value}</span>
+              </li>
+            )
+          )}
         </ul>
       </div>
       <div>
-        <h2 className="text-[#4338CA]">About Me</h2>
-        <p className="text-lg text-[#6B7280]	">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. <br />{" "}
-          Veniam aut, odit laborum aliquam voluptatum nisi mollitia.
+        <h2 className="text-[#4338CA]">{ceviri[leanguage].about}</h2>
+        <p className="text-lg max-w-md whitespace-pre-line text-[#6B7280] mt-2">
+          {ceviri[leanguage].info1}
         </p>
         <span></span>
-        <p className="text-lg text-[#6B7280]">
-          Mnima accusamus ratione soluta aperiam sit voluptate? <br /> Dicta
-          quod deserunt quam temporibus cumque magnam!{" "}
+        <p className="text-lg max-w-md whitespace-pre-line text-[#6B7280] mt-2">
+          {ceviri[leanguage].info2}
         </p>
-       
       </div>
     </div>
   );

@@ -1,18 +1,20 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 export const TransleteContext = createContext();
 
 export default function TransleteContextProvider({ children }) {
   const [leanguage, setLeanguage] = useState(() => {
     const savedLeanguage = localStorage.getItem("leanguage");
-    return savedLeanguage === "en";
+    return savedLeanguage === "tr" || savedLeanguage === "en"
+      ? savedLeanguage
+      : "en";
   });
   useEffect(() => {
     localStorage.setItem("leanguage", leanguage);
   }, [leanguage]);
 
   const changeLeanguage = () => {
-    setLeanguage(!leanguage);
+    setLeanguage((prevLanguage) => (prevLanguage === "en" ? "tr" : "en"));
   };
 
   return (
