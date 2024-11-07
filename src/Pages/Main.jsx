@@ -3,9 +3,12 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import burkidad from "../assets/burkidad.jpg";
 import { ceviri } from "../language";
 import useLanguage from "../hooks/useLanguage";
+import { darkMode } from "../../tailwind.config";
+import useDark from "../hooks/useDark";
 
 export default function Main() {
   const { leanguage } = useLanguage();
+  const { darkMode } = useDark();
   return (
     <div className="flex flex-col md:flex-row items-center justify-around gap-8 px-4 md:px-8 lg:px-16 py-8">
       <div className="flex flex-col pt-14 w-full md:w-1/2">
@@ -24,7 +27,13 @@ export default function Main() {
         </p>
 
         <div className="mt-6 space-y-3 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row">
-          <button className="px-4 py-2  bg-[#3730A3] rounded-md w-full sm:w-auto text-white dark:bg-[#E1E1FF] dark:text-[#000000] ">
+          <button
+            className={
+              darkMode
+                ? "px-4 py-2  bg-[#E1E1FF] rounded-md w-full sm:w-auto  text-[#000000] "
+                : "px-4 py-2  bg-[#3730A3] rounded-md w-full sm:w-auto  "
+            }
+          >
             {ceviri[leanguage].hireme}
           </button>
           <a

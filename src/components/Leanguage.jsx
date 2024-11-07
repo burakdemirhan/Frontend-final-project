@@ -1,7 +1,9 @@
+import useDark from "../hooks/useDark";
 import useLanguage from "../hooks/useLanguage";
 
 export default function Leanguage() {
   const { leanguage, changeLeanguage } = useLanguage();
+  const { darkMode } = useDark();
 
   const handleClick = () => {
     changeLeanguage();
@@ -15,11 +17,17 @@ export default function Leanguage() {
       >
         {leanguage === "tr" ? (
           <>
-            <span className="text-[#4731D3]">Switch</span> TO ENGLISH
+            <span className={darkMode ? "text-[#B7AAFF]" : "text-[#4338CA]"}>
+              Switch
+            </span>{" "}
+            TO ENGLISH
           </>
         ) : (
           <>
-            <span className="text-[#4731D3]">TÜRKÇEYE</span>'YE GEÇ
+            <span className={darkMode ? "text-[#E1E1FF]" : "text-[#4338CA]"}>
+              TÜRKÇEYE
+            </span>
+            'YE GEÇ
           </>
         )}
       </button>
