@@ -11,8 +11,8 @@ export default function Links() {
   ];
 
   return (
-    <div className="flex">
-      <nav className="flex gap-4 ml-auto items-center">
+    <div className="flex justify-center sm:justify-end">
+      <nav className="flex flex-col sm:flex-row gap-4 items-center">
         {navItems.map((item) => {
           const label = ceviri[leanguage]
             ? ceviri[leanguage][item.key]
@@ -20,7 +20,7 @@ export default function Links() {
           return item.isButton ? (
             <button
               key={item.key}
-              className="border-[#3730A3] border-2 text-[#3730A3] w-24 h-10 rounded-md flex items-center justify-center"
+              className="border-[#3730A3] border-1 text-[#3730A3] w-full sm:w-24 h-10 rounded-md flex items-center justify-center dark:bg-[#FFFFFF]"
             >
               {label}
             </button>

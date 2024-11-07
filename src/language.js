@@ -86,7 +86,7 @@ export const ceviri = {
         {
           ptitle: "Watchlist",
           pdesc: "A movie watching app. Developed using React and Redux.",
-          technologies: ["React", "Redux, Axios"],
+          technologies: ["React", "Redux", "Axios"],
           github: "https://github.com/burakdemirhan/fsweb-s10g3-redux-watchlist-solution",
           site: "https://fsweb-s10g3-redux-watchlist-solution-omega.vercel.app/",
           image: watchlist,

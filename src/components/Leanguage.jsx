@@ -6,9 +6,13 @@ export default function Leanguage() {
   const handleClick = () => {
     changeLeanguage();
   };
+
   return (
-    <div>
-      <button onClick={handleClick} className="text-[#777777]">
+    <div className="flex justify-center sm:justify-start">
+      <button
+        onClick={handleClick}
+        className="text-[#777777] text-sm sm:text-base md:text-lg"
+      >
         {leanguage === "tr" ? (
           <>
             <span className="text-[#4731D3]">Switch</span> TO ENGLISH

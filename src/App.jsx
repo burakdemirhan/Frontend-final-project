@@ -11,16 +11,14 @@ import useDark from "./hooks/useDark";
 function App() {
   const { darkMode } = useDark();
   return (
-    <div
-      className={`${
-        darkMode ? "dark bg-[#252128] text-[#AEBCCF] " : "bg-white text-black"
-      } mx-auto px-32 py-8`}
-    >
-      <Header />
-      <Main />
-      <Skills />
-      <Profile />
-      <Projects />
+    <div className={`${darkMode ? "dark bg-[#252128]  " : " "} `}>
+      <div className="mx-auto max-w-screen-2xl px-6 sm:px-12 lg:px-24 py-8 ">
+        <Header />
+        <Main />
+        <Skills />
+        <Profile />
+        <Projects />
+      </div>
       <Footer />
     </div>
   );

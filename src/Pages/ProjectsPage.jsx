@@ -4,11 +4,13 @@ import { ceviri } from "../language";
 
 export default function ProjectsPages() {
   const { leanguage } = useLanguage();
-  return (
-    <div>
-      <div className="w-4/4 h-px bg-[#BAB2E7] my-8"></div>
 
-      <h1 className="mb-4"> {ceviri[leanguage].proje} </h1>
+  return (
+    <div className="px-4 sm:px-8 md:px-16 lg:px-32 py-8">
+      <div className="w-full h-px bg-[#BAB2E7] my-8"></div>
+      <h1 className="sm:text-left text-2xl sm:text-3xl font-bold text-[#4338CA] mb-4 dark:text-[#AEBCCF]">
+        {ceviri[leanguage].proje}
+      </h1>
 
       <Project />
     </div>
