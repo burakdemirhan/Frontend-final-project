@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import axios from "axios";
-import { ceviri } from "./language";
+import { ceviri } from "../language";
 export const TransleteContext = createContext();
 
 export default function TransleteContextProvider({ children }) {
