@@ -4,13 +4,14 @@ import Links from "../components/Links";
 
 export default function Header() {
   return (
-    <div className="">
-      <div className="flex justify-end items-center gap-2 mb-4 ">
+    <div className="p-4">
+      <div className="flex flex-col sm:flex-row justify-end items-center gap-2 mb-4">
         <Button />
-        <span>-</span>
+        <span className="hidden sm:inline">-</span>
         <Leanguage />
       </div>
-      <Links className="ml-auto" />
+
+      <Links />
     </div>
   );
 }

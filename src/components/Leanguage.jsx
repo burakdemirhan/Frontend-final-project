@@ -13,7 +13,7 @@ export default function Leanguage() {
     <div className="flex justify-center sm:justify-start">
       <button
         onClick={handleClick}
-        className="text-[#777777] text-sm sm:text-base md:text-lg"
+        className="text-[#777777]text-[#777777] text-xs sm:text-sm md:text-base"
       >
         {leanguage === "tr" ? (
           <>

@@ -56,7 +56,7 @@ export const ceviri = {
 
     en: {
     skills: "Skills",
-    projects: "Projecets",
+    projects: "Projects",
     hireme:"Hire me",
     title: "If You Love Something Set It Free Unless It's A Tiger",
     desc: "Hello, I'm Burak. I am a Full Stack Developer candidate. If you're looking for the most talented person for this position, I’m probably not the one. However, if you want to work with someone whose dreams are bigger than what they’ve already accomplished, then you’re about to meet the right person. As Jeff Bezos said, `Talent can get you somewhere for a short period, but passion and determination will bring long-term success.` ",
